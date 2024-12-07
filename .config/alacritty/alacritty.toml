@@ -1,0 +1,22 @@
+import = ["~/.config/alacritty/themes/snazzy.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+option_as_alt = "Both"
+dimensions = { columns = 140, lines = 30 }
+padding.x = 16
+padding.y = 14
+decorations = "None"
+opacity = 0.98
+
+[font]
+size = 14
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+
+[shell]
+program = "/opt/homebrew/bin/zellij"
+args = ["attach", "-c", "default"]

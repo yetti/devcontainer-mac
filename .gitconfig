@@ -1,0 +1,46 @@
+[alias]
+  co = checkout
+	st = status -s
+	br = branch
+	last = log -1 HEAD
+	diff = diff --word-diff
+	save = !git add -A && git commit -m 'SAVEPOINT'
+	wip = commit -am "WIP"
+	amend = commit -a --amend
+	bclean = "!f() { git branch --merged ${1-main} | grep -v " ${1-main}$" | xargs -r git branch -d; }; f"
+	bclean-master = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+	cleanbase = "!f(){ for b in $(git for-each-ref refs/heads --format=\"%(refname:short)\" | grep -vE \"main\"); do if [[ ! $(git cherry -v origin/main $b | grep \"^+\") ]]; then git branch -d $b; fi; done }; f"
+	lg = log --graph --oneline --decorate --all
+	lgs = log --graph --oneline --decorate --all --name-status
+	pa = "!f() { git fetch --all && for b in `git branch -r | grep -v -- '->'`; do git branch --track ${b##origin/} $b; done && git pull --all; }; f"
+	chlogm = "!f() { git log $1...$2 --pretty=format:'* [view](http://github.com/$3/$4/commit/%H) %b %s' --reverse | grep 'Merge pull request'; }; f"
+	chlog = "!f() { git log $1...$2 --pretty=format:'* [view](http://github.com/$3/$4/commit/%H) %b %s' --reverse | grep -v Merge; }; f"
+	bug = "!f() { git feature -a bug $1; }; f"
+	chore = "!f() { git feature -a chore $1; }; f"
+	refactor = "!f() { git refactor -a refactor $1; }; f"
+	undo = reset --soft HEAD^
+	skip = "!f() { git update-index --assume-unchanged $1; }; f"
+	noskip = "!f() { git update-index --no-assume-unchanged $1; }; f"
+[user]
+	name = Yetrina Battad
+	email = hello@yetti.io
+[push]
+  default = current
+[color]
+  ui = auto
+[core]
+  autocrlf = input
+  excludesfile = ~/.gitignore_global
+[fetch]
+  prune = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[sequence]
+	editor = code --wait
