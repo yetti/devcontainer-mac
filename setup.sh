@@ -41,6 +41,7 @@ sudo chsh -s $(which zsh) vscode
 # Install mise-en-place if it doesn't exist
 cp .tool-versions ~/
 [ -d '~/.local/bin/mise' ] || curl https://mise.run | sh
+ln -s ~/.local/share/mise ~/.asdf
 # This is hard coded in .zshrc
 # echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
 
