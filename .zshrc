@@ -108,6 +108,7 @@ alias om="overmind"
 alias oms="overmind s -f ${1}"
 alias omd="overmind s -D -f ${1}"
 alias zel="zellij"
+alias init_cz="npm install -g commitizen cz-conventional-changelog"
 
 # GPG
 
