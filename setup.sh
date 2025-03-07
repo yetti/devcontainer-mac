@@ -51,7 +51,3 @@ mise install
 
 # Install base Ruby gems
 gem install bundler rails foreman
-
-# Install commitizen
-npm install -g commitizen cz-conventional-changelog
-
