@@ -2,10 +2,10 @@
 
 # Setup locales
 echo "en_AU.UTF-8" | sudo tee -a /etc/locale.gen
-sudo locale-gen
 export LANGUAGE="en_AU.UTF-8"
 export LC_TYPE="en_AU.UTF-8"
 export LANG="en_AU.UTF-8"
+sudo locale-gen
 
 sudo apt-get update
 sudo apt-get upgrade -y
