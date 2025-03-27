@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # Install basic system utilities
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends zsh telnet fzy tzdata direnv
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends zsh telnet fzy tzdata direnv tmux
 
 # Install network utilities
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends iputils-ping dnsutils mtr iproute2 bmon iperf3
