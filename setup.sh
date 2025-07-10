@@ -27,6 +27,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends p
 # Copy dotfiles and tool config
 cp {.bashrc,.zshrc,.gitconfig,.gitignore_global,.gemrc,.czrc} ~/
 cp -R .config ~/
+cp -R .aws ~/
 
 # Change default shell to zsh
 sudo chsh -s $(which zsh) vscode
