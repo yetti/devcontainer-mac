@@ -109,7 +109,7 @@ alias oms="overmind s -f ${1}"
 alias omd="overmind s -D -f ${1}"
 alias zel="zellij"
 alias init_cz="npm install -g commitizen cz-conventional-changelog"
-alias init_claude="npm install -g @anthropic-ai/claude-code"
+alias init_claude="npm install -g @anthropic-ai/claude-code && aws configure --profile bedrock"
 alias cb="export CLAUDE_CODE_USE_BEDROCK=1 && export AWS_REGION=us-west-2 && claude"
 
 # GPG
