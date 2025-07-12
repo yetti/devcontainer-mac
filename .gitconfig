@@ -21,6 +21,8 @@
 	undo = reset --soft HEAD^
 	skip = "!f() { git update-index --assume-unchanged $1; }; f"
 	noskip = "!f() { git update-index --no-assume-unchanged $1; }; f"
+	fpush = "!git fetch && git pull && git push"
+	safepush = "!git fetch origin && git pull origin $(git branch --show-current) && git push"
 [user]
 	name = Yetrina Battad
 	email = hello@yetti.io
