@@ -43,11 +43,11 @@ sudo chsh -s $(which zsh) vscode
 cp .tool-versions ~/
 [ -d '~/.local/bin/mise' ] || curl https://mise.run | sh
 ln -s ~/.local/share/mise ~/.asdf
-# This is hard coded in .zshrc
-# echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
+
+# Activate mise
+~/.local/bin/mise activate zsh
 
 # Install mise plugins
-mise plugin i yarn
 mise install
 
 # Install base Ruby gems
