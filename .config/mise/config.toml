@@ -1,5 +1,4 @@
 [tools]
-claude = "latest"
 python = "latest"
 go = "latest"
 java = "corretto-23"
