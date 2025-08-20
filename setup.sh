@@ -48,7 +48,7 @@ ln -s ~/.local/share/mise ~/.asdf
 ~/.local/bin/mise activate zsh
 
 # Install mise plugins
-mise install
+~/.local/bin/mise install
 
 # Install base Ruby gems
 gem install bundler rails foreman overmind
