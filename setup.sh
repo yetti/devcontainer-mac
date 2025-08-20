@@ -44,6 +44,9 @@ cp .tool-versions ~/
 [ -d '~/.local/bin/mise' ] || curl https://mise.run | sh
 ln -s ~/.local/share/mise ~/.asdf
 
+# Trust mise config in dotfiles
+~/.local/bin/mise trust ~/dotfiles/.config/mise/config.toml
+
 # Activate mise
 ~/.local/bin/mise activate zsh
 
@@ -51,6 +54,7 @@ ln -s ~/.local/share/mise ~/.asdf
 ~/.local/bin/mise install
 
 # Install base Ruby gems
+which gem
 gem install bundler rails foreman overmind
 
 # Install Claude Code
