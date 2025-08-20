@@ -55,6 +55,3 @@ ln -s ~/.local/share/mise ~/.asdf
 
 # Install mise plugins
 ~/.local/bin/mise install
-
-# Install Claude Code
-npm install -g @anthropic-ai/claude-code
