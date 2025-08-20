@@ -52,3 +52,6 @@ ln -s ~/.local/share/mise ~/.asdf
 
 # Install base Ruby gems
 gem install bundler rails foreman overmind
+
+# Install Claude Code
+npm install -g @anthropic-ai/claude-code
