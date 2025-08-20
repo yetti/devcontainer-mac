@@ -25,7 +25,7 @@ sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends pack-cli
 
 # Copy dotfiles and tool config
-cp {.bashrc,.zshrc,.gitconfig,.gitignore_global,.gemrc,.czrc} ~/
+cp {.bashrc,.zshrc,.gitconfig,.gitignore_global,.gemrc,.czrc,.default-gems} ~/
 cp -R .config ~/
 cp -R .aws ~/
 
@@ -52,10 +52,6 @@ ln -s ~/.local/share/mise ~/.asdf
 
 # Install mise plugins
 ~/.local/bin/mise install
-
-# Install base Ruby gems
-which gem
-gem install bundler rails foreman overmind
 
 # Install Claude Code
 npm install -g @anthropic-ai/claude-code
