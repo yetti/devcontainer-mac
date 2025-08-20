@@ -17,7 +17,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends z
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends iputils-ping dnsutils mtr iproute2 bmon iperf3
 
 # Install system dependencies
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential libssl-dev automake autoconf patch rustc git-extras libjemalloc2
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential libssl-dev automake autoconf patch git-extras libjemalloc2
+
+# Install ruby-build dependencies https://github.com/rbenv/ruby-build/wiki#ubuntudebianmint
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends autoconf libssl-dev libyaml-dev zlib1g-dev libffi-dev libgmp-dev rustc
 
 # Install buildpack
 sudo add-apt-repository ppa:cncf-buildpacks/pack-cli -y --no-install-recomments
