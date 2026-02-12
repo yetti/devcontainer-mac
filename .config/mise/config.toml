@@ -1,12 +1,10 @@
 [tools]
 python = "latest"
 go = "latest"
-java = "corretto-23"
+java = "temurin-25"
 lazydocker = "latest"
 node = "lts"
-pnpm = "latest"
 ruby = "latest"
-yarn = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["ruby"]
