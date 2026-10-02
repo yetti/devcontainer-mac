@@ -23,7 +23,7 @@ zinit light-mode for \
 
 # MISE-EN-PLACE
 
-eval "$(HOME/.local/bin/mise activate zsh)"
+eval "$($HOME/.local/bin/mise activate zsh)"
 
 # Use modern completion system
 autoload -U +X compinit && compinit
