@@ -62,4 +62,4 @@ corepack prepare pnpm@latest --activate
 corepack prepare yarn@latest --activate
 
 # Install Claude code
-curl -fsSL https://claude.ai/install.sh | bash
+# curl -fsSL https://claude.ai/install.sh | bash
