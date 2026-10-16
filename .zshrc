@@ -21,16 +21,7 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# MISE-EN-PLACE
-
-eval "$($HOME/.local/bin/mise activate zsh)"
-
-# Use modern completion system
-autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit 
-
-# Set up a default prompt
-
+# Set up the prompt
 autoload -Uz promptinit
 promptinit
 prompt fade
@@ -44,14 +35,16 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-# Completions
+# Use modern completion system
+autoload -Uz +X compinit && compinit
+autoload -Uz +X bashcompinit && bashcompinit 
+compinit -u
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
@@ -99,6 +92,10 @@ zinit light starship/starship
 
 # USER SETTINGS
 
+# MISE-EN-PLACE
+
+eval "$($HOME/.local/bin/mise activate zsh)"
+
 # ALIASES
 
 alias vim="nvim"
@@ -109,9 +106,6 @@ alias oms="overmind s -f ${1}"
 alias omd="overmind s -D -f ${1}"
 alias zel="zellij"
 alias init_cz="npm install -g commitizen cz-conventional-changelog"
-alias init_claude="npm install -g @anthropic-ai/claude-code"
-alias init_clauderock="aws configure --profile bedrock"
-alias clauderock="export CLAUDE_CODE_USE_BEDROCK=1 && export AWS_REGION=us-west-2 && claude"
 
 # GPG
 
