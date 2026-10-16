@@ -42,6 +42,10 @@ sudo chsh -s $(which zsh) vscode
 # source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 # zinit self-update
 
+# Secure the local user's Zinit profile directory permissions
+chmod -R g-w,o-w /home/local-dev/.local/share/zinit
+chown -R local-dev:local-dev /home/local-dev/.local/share/zinit
+
 # Install mise-en-place if it doesn't exist
 cp .tool-versions ~/
 [ -d '~/.local/bin/mise' ] || curl https://mise.run | sh
