@@ -39,9 +39,8 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 # Use modern completion system
-autoload -Uz +X compinit && compinit
+autoload -Uz +X compinit -u && compinit
 autoload -Uz +X bashcompinit && bashcompinit 
-compinit -u
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
