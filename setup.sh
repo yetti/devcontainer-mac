@@ -61,6 +61,7 @@ ln -s ~/.local/share/mise ~/.asdf
 ~/.local/bin/mise install
 
 # Install pnpm and yarn via corepack
+npm install -g corepack
 corepack enable
 corepack prepare pnpm@latest --activate
 corepack prepare yarn@latest --activate
