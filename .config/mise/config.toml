@@ -3,7 +3,7 @@ python = "latest"
 go = "latest"
 lazydocker = "latest"
 node = "lts"
-ruby = "4.0.7"
+ruby = "4.0.10"
 
 [settings]
 idiomatic_version_file_enable_tools = ["ruby", "node"]
